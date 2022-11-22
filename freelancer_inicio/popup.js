@@ -12,41 +12,51 @@ var btnAbrirPopup3 = document.getElementById("btncomprar4");
 var btnAbrirPopup4 = document.getElementById("btncomprar5");
 var btnAbrirPopup5 = document.getElementById("btncomprar6");
 
+
+
+let onBuy = (id, name, price, description) => {
+	document.getElementById("nombre-pin").innerHTML = name;
+	document.getElementById("precio-pin").innerHTML = price;
+	document.getElementById("descripcion-pin").innerHTML = description;
+	overlay.classList.add("active");
+	popup.classList.add("active");
+}
+
 btnCerrarPopup.addEventListener("click", function(e){
 	e.preventDefault();
 	overlay.classList.remove("active");
 	popup.classList.remove("active");
 });
 
-btnAbrirPopup0.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup0.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
-btnAbrirPopup1.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup1.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
-btnAbrirPopup2.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup2.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
-btnAbrirPopup3.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup3.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
-btnAbrirPopup4.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup4.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
-btnAbrirPopup5.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
-});
+// btnAbrirPopup5.addEventListener("click", function(){
+// 	overlay.classList.add("active");
+// 	popup.classList.add("active");
+// });
 
 /*
 	variables para abrir el popup de datos despues de apretar el botón de compra

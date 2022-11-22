@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    include_once("dataHandler.php");
+?>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -98,46 +101,12 @@
         <h2>Catalogo</h2>
 
         <div class="catalogo" id="catalogo">
-            <section class="servicio" id="pin1">
-                <h3>Mario Bros</h3>
-                <img src="img/pin1.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar1"> $70.00</button>
-            </section>
-            
-            <section class="servicio">
-                <h3>Goku</h3>
-                <img src="img/pin2.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar2"> $65.00</button>
-            </section>
-            
-            <section class="servicio">
-                <h3>Sonic</h3>
-                <img src="img/pin3.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar3"> $120.00</button>
-            </section>
-            <section class="servicio">
-                <h3>Carita Feliz</h3>
-                <img src="img/pin4.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar4"> $100.00</button>
-            </section>
-            
-            <section class="servicio">
-                <h3>Trebol</h3>
-                <img src="img/pin5.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar5"> $300.00</button>
-            </section>
-            
-            <section class="servicio">
-                <h3>Nike</h3>
-                <img src="img/pin6.png" alt="">
-                <p>Fusce eleifend neque gravida augue viverra facilisis. Sed sit amet auctor tellus, eget feugiat diam. Vivamus nec aliquam est.</p>
-                <button class="boton" id="btncomprar6"> $80.00</button>
-            </section>
+            <?php
+                $dataHandler = new dataHandler;
+                $dataHandler->init();
+                $dataHandler->fetch_products();
+                $dataHandler->print_products();
+            ?>
         </div>        
     </section>
 
