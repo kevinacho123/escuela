@@ -4,10 +4,10 @@
 class dataHandler {
 
     /** @var String hostname to be used in the connection */
-    private $host = "192.168.1.216";
+    private $host = "";
     private $port = "3306";
     private $username = "root";
-    private $password = "Hijodejimmy93$";
+    private $password = "";
     private $database = "test_kevin";
 
     public $connection;
